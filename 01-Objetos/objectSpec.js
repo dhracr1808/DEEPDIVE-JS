@@ -90,8 +90,9 @@ describe('Propiedades en una Función', function() {
   });
 
   describe('Función `setPropsOnFunc`', function() {
-    it('define el año (`year`) de la función a 2017', function() {
-      expect(functionObject.year).toEqual('2017');
+    it('define el año (`year`) de la función a el año en que estemos 👀', function() {
+      var date = new Date()
+      expect(functionObject.year).toEqual(date.getFullYear());
     });
 
     it('agrega la propiedad `mitad` con una función que divida el valor ingresado por parámetro a la mitad', function() {
